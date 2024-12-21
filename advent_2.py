@@ -30,11 +30,10 @@ def _is_safe_with_dampener(report: list[int]) -> bool:
     if _is_safe(report):
         return True
     
-    for i in range(len(report)):
-        if _is_safe(report[:i] + report[i + 1:]):
-            return True
-    
-    return False
+    return any(
+        _is_safe(report[:i] + report[i + 1:])
+        for i in range(len(report))
+    )
 
 
 def _count_safe_reports(

@@ -20,7 +20,7 @@ def _calculate_total_dist(first: list[int], second: list[int]) -> int:
 
 def _calculate_similarity_score(first: list[int], second: list[int]) -> int:
     c = Counter(second)
-    return sum(i * c[i] for i in first)
+    return sum(map(lambda i: i * c[i], first))
 
 
 if __name__ == '__main__':
