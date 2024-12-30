@@ -1,8 +1,6 @@
-import dataclasses
 from collections import Counter, defaultdict
 from functools import reduce
-from itertools import chain, repeat
-from typing import Iterator, Iterable, Mapping
+from typing import Mapping
 
 
 def _parse_stones() -> list[str]:

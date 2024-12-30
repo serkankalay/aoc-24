@@ -1,7 +1,6 @@
-import enum
 import itertools
 import operator
-from typing import Iterable, Callable
+from typing import Callable
 
 
 def _parse_line(line: str) -> tuple[int, list[int]]:
